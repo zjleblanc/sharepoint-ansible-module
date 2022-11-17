@@ -384,8 +384,8 @@ def main():
             result = []
             for kind in ["files", "folders"]:
                 command = (
-                    "/_api/web/GetFolderByServerRelativeUrl('/sites/{}/{}')/{}".format(
-                        site_name, remote_file_path, kind
+                    "/_api/web/GetFolderByServerRelativeUrl('{}')/{}".format(
+                        remote_file_path, kind
                     )
                 )
 

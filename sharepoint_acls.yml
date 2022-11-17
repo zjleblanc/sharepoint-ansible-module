@@ -1,0 +1,18 @@
+---
+- name: Test Sharepoint ACLs
+  hosts: localhost
+  gather_facts: false
+
+  vars:
+    remote_file_path: "Shared Documents"
+
+  tasks:
+  - name: List the contents of a folder
+    sharepoint:
+      method : list
+      remote_file_path: "{{ remote_file_path }}"
+    register: r_sp_folder_list
+
+  - name: Print List
+    debug:
+      var: r_sp_folder_list
