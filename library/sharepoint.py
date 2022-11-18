@@ -182,6 +182,10 @@ EXAMPLES = """
 from ansible.module_utils.basic import AnsibleModule
 from ansible.module_utils.basic import env_fallback
 
+ODATA_SELECTORS = {
+    "get": "$value",
+    "metadata": "ListItemAllFields"
+}
 
 def main():
 
@@ -192,6 +196,7 @@ def main():
             choices=[
                 "put",
                 "get",
+                "metadata",
                 "delete",
                 "list",
                 "mkdir",
@@ -322,27 +327,32 @@ def main():
                     msg="The file {} is missing.".format(local_file_fullpath)
                 )
 
-        if method == "get":
+        if method == "get" or method == "metadata":
             url = "https://{}.sharepoint.com/sites/{}".format(tenant_name, site_name)
             command = (
-                "/_api/web/GetFileByServerRelativeUrl('/sites/{}/{}/{}')/$value".format(
-                    site_name, remote_file_path, remote_file_name
+                "/_api/web/GetFileByServerRelativeUrl('/sites/{}/{}/{}')/{}".format(
+                    site_name, remote_file_path, remote_file_name, ODATA_SELECTORS[method]
                 )
             )
-
             response = requests.get("{}/{}".format(url, command), headers=headers)
             if response.ok:
-                local_file_fullpath = os.path.join(local_file_path, local_file_name)
                 content = response.content
                 try:
-                    with open(local_file_fullpath, "wb") as file:
-                        file.write(content)
+                    if method == "get":
+                        local_file_fullpath = os.path.join(local_file_path, local_file_name)
+                        with open(local_file_fullpath, "wb") as file:
+                            file.write(content)
 
-                    module.exit_json(
-                        changed=True,
-                        code=response.status_code,
-                        # headers=headers,
-                    )
+                        module.exit_json(
+                            changed=True,
+                            code=response.status_code
+                        )
+                    elif method == "metadata":
+                        module.exit_json(
+                            changed=True,
+                            code=response.status_code,
+                            metadata=response.content
+                        )
                 except FileNotFoundError as e:
                     module.fail_json(
                         msg="The file {} is missing.".format(local_file_fullpath)
@@ -377,6 +387,7 @@ def main():
                     code=response.status_code,
                     # headers=headers,
                 )
+        
         if method == "list":
             headers["Accept"] = "application/json;odata=nometadata"
             url = "https://{}.sharepoint.com/sites/{}".format(tenant_name, site_name)

@@ -1,0 +1,96 @@
+{
+    "d": {
+        "__metadata": {
+            "id": "d3af7f4c-7214-4bd8-9aff-1403d11f9804",
+            "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)",
+            "etag": "\"3\"",
+            "type": "SP.Data.Shared_x0020_DocumentsItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/FirstUniqueAncestorSecurableObject"
+            }
+        },
+        "RoleAssignments": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/RoleAssignments"
+            }
+        },
+        "AttachmentFiles": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/AttachmentFiles"
+            }
+        },
+        "ContentType": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/ContentType"
+            }
+        },
+        "GetDlpPolicyTip": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/GetDlpPolicyTip"
+            }
+        },
+        "FieldValuesAsHtml": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/FieldValuesAsHtml"
+            }
+        },
+        "FieldValuesAsText": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/FieldValuesAsText"
+            }
+        },
+        "FieldValuesForEdit": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/FieldValuesForEdit"
+            }
+        },
+        "File": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/File"
+            }
+        },
+        "Folder": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/Folder"
+            }
+        },
+        "LikedByInformation": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/LikedByInformation"
+            }
+        },
+        "ParentList": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/ParentList"
+            }
+        },
+        "Properties": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/Properties"
+            }
+        },
+        "Versions": {
+            "__deferred": {
+                "uri": "https://zleblanc.sharepoint.com/sites/Ansible/_api/Web/Lists(guid'f510ed1e-71ba-4115-bd2e-b724b4b47b7e')/Items(2)/Versions"
+            }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 2,
+        "ServerRedirectedEmbedUri": "https://zleblanc.sharepoint.com/sites/Ansible/_layouts/15/Doc.aspx?sourcedoc={91e6709e-ea60-405a-bb87-53b7e3d14686}&action=interactivepreview",
+        "ServerRedirectedEmbedUrl": "https://zleblanc.sharepoint.com/sites/Ansible/_layouts/15/Doc.aspx?sourcedoc={91e6709e-ea60-405a-bb87-53b7e3d14686}&action=interactivepreview",
+        "ContentTypeId": "0x0101007E5258D4EF60F34FAF9B68B46F8A1305",
+        "ComplianceAssetId": null,
+        "Title": null,
+        "ID": 2,
+        "Created": "2022-11-17T10:03:05",
+        "AuthorId": 9,
+        "Modified": "2022-11-17T10:03:42",
+        "EditorId": 9,
+        "OData__CopySource": null,
+        "CheckoutUserId": null,
+        "OData__UIVersionString": "2.0",
+        "GUID": "718044a7-3d7e-4cdb-9b1f-b883e00c0e1a"
+    }
+}

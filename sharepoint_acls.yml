@@ -4,15 +4,24 @@
   gather_facts: false
 
   vars:
-    remote_file_path: "Shared Documents"
+    remote_file_path: "Shared Documents/ExampleFolder"
 
   tasks:
-  - name: List the contents of a folder
-    sharepoint:
-      method : list
-      remote_file_path: "{{ remote_file_path }}"
-    register: r_sp_folder_list
+    - name: List the contents of a folder
+      sharepoint:
+        method : list
+        remote_file_path: "{{ remote_file_path }}"
+      register: r_sp_folder_list
 
-  - name: Print List
-    debug:
-      var: r_sp_folder_list
+    - name: Get file details
+      sharepoint:
+        method: metadata
+        remote_file_path: "{{ remote_file_path }}"
+        remote_file_name: "Info.docx"
+      register: r_sp_file
+
+    - name: Print List
+      copy:
+        content: "{{ r_sp_file.metadata | from_json }}"
+        dest: meta.json
+        mode: 0644
